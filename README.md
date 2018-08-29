@@ -11,7 +11,7 @@ Intégrant les fonctionnalités suivantes :
 
 ## Installation
 
-Prérequis : Avoir déja node.js d'installé
+Prérequis : Avoir déjà node.js d'installé
 
 [Doc TiddlyWiki on Node](https://tiddlywiki.com/#TiddlyWiki%20on%20Node.js)
 et se référer à [Installer TydllyWiki on node](https://tiddlywiki.com/#Installing%20TiddlyWiki%20on%20Node.js).

@@ -1,15 +1,19 @@
 created: 20180828054323061
-modified: 20180829062359406
+modified: 20180829092214434
 title: HelloThere
 type: text/vnd.tiddlywiki
 
 !!Welcome
 
-Ceci est une édition de TiddlyWiki
+Ceci est une édition de TiddlyWiki, axé sur la documentation de projets web (logiciels, applications, sites), la prise de note …
 
-* Language Français
-* Diagrammes et Flow charts avec Mermaid
-* Édition avec Code mirror editor 
+[[Dépot GitHub du projet|https://github.com/mistergraphx/TW5_GX_edition]]
+
+''Fonctionalités''
+
+* langage français
+* diagrammes et Flow charts avec Mermaid
+* Édition avec Code mirror editor
 * Coloration syntaxique avec Higlight
 * Présentation d'arborescences et système de fichier avec $:/plugins/mistergraphx/treeview
 * Sprite svg et icons $:/plugins/mistergraphx/tw5sprite
