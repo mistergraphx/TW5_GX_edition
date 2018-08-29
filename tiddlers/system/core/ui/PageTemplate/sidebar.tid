@@ -1,0 +1,23 @@
+created: 20180829094135582
+modified: 20180829094142894
+tags: $:/tags/PageTemplate
+title: $:/core/ui/PageTemplate/sidebar
+type: text/vnd.tiddlywiki
+
+<$scrollable fallthrough="no" class="tc-sidebar-scrollable">
+
+<div class="tc-sidebar-header">
+
+<$reveal state="$:/state/sidebar" type="match" text="yes" default="yes" retain="yes" animate="yes">
+
+
+
+{{||$:/core/ui/PageTemplate/pagecontrols}}
+
+<$transclude tiddler="$:/core/ui/SideBarLists" mode="inline"/>
+
+</$reveal>
+
+</div>
+
+</$scrollable>

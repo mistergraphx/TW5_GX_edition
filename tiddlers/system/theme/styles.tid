@@ -1,10 +1,27 @@
 created: 20180828140013775
-modified: 20180828141446753
+modified: 20180829095419781
 tags: $:/tags/Stylesheet
 title: $:/_Styles
 type: text/vnd.tiddlywiki
 
+.tc-topbar button {
+	float: left;
+	width: 3rem;
+  height: 3rem;
+}
+.tc-topbar-left {
+    left: 0;
+    top: 0;
+    width: 100%;
+		padding: .5em 0;
 
+    background-color: white;
+
+		<<box-shadow "0 2px 26px 5px rgba(0,0,0,0.75)">>
+}
+	.tc-topbar-left .tc-site-title a {
+		text-decoration: none;
+	}
 
 .tc-sidebar-lists input {
     color: #333333;
@@ -30,6 +47,7 @@ type: text/vnd.tiddlywiki
 	.tc-story-river {
 		margin-left: 30%;
 		width: auto;
+		padding-top: 5.5rem; /* Compensse la hauteur de la TopBar */
 	}
 	<<if-no-sidebar "
 		.tc-story-river {

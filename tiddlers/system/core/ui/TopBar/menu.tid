@@ -1,5 +1,5 @@
 created: 20180828174325145
-modified: 20180828174635868
+modified: 20180829094223366
 tags: $:/tags/TopLeftBar
 title: $:/core/ui/TopBar/menu
 type: text/vnd.tiddlywiki
@@ -10,3 +10,13 @@ type: text/vnd.tiddlywiki
 <$reveal state="$:/state/sidebar" type="match" text="no">
 <$button set="$:/state/sidebar" setTo="yes" tooltip={{$:/language/Buttons/ShowSideBar/Hint}} aria-label={{$:/language/Buttons/ShowSideBar/Caption}} class="tc-btn-invisible">{{$:/core/images/chevron-right}}</$button>
 </$reveal>
+
+
+<h1 class="tc-site-title"><a href="/">
+<$transclude tiddler="$:/SiteTitle" mode="inline"/>
+</a></h1>
+
+
+<div class="tc-site-subtitle">
+<$transclude tiddler="$:/SiteSubtitle" mode="inline"/>
+</div>
