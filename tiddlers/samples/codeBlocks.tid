@@ -1,0 +1,33 @@
+created: 20180828063606528
+modified: 20180828063938054
+tags: Samples
+title: codeBlocks
+type: text/vnd.tiddlywiki
+
+PHP
+
+```php
+<?php
+
+echo "Some text";
+
+?>
+```
+
+Javascript
+
+```javascript
+// A comment
+function call(i){
+	var response = i * 2;
+	return response;
+}
+```
+
+CSS
+
+```css
+.class {
+	background-color: blue;
+}
+```

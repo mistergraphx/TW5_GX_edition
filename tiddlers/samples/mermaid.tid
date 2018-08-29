@@ -1,0 +1,31 @@
+created: 20180823073310072
+modified: 20180828133047594
+tags: Samples
+title: Mermaid
+type: text/vnd.tiddlywiki
+
+!! Mermaid Diagrams
+
+Doc : https://mermaidjs.github.io/
+
+!!! Limitations
+
+<<.tip """Mermaid propose l'ajout d'icones uniquement via la lib Font Awesome, si l'on souhaite utiliser des icones dans les blocs de diagrammes il faut installer FontAwesome, soit via le plugin, soit via le CDN.""">>
+
+!!! Flow Charts
+
+```
+<$mermaid>
+graph LR
+  A --> B(Dir)
+  B --> C{C}
+  A -.- C
+</$mermaid>
+```
+
+<$mermaid>
+graph LR
+  A --> B(Dir)
+  B --> C{C}
+  A -.- C
+</$mermaid>

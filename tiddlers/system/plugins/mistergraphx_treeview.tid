@@ -1,0 +1,48 @@
+author: Arnaud B (Mist. GraphX)
+core-version: >=5.1.11
+created: 20180826174239568
+dependents: tw5sprite
+description: Treeview : format lists as a treeview
+list: example
+modified: 20180828134329982
+plugin-type: plugin
+source: 
+tags: 
+title: $:/plugins/mistergraphx/treeview
+type: application/json
+version: 1.0.7
+
+{
+    "tiddlers": {
+        "$:/plugins/mistergraphx/treeview/treeview-styles.css": {
+            "text": "/* Style pour les listes en mode treeview\n\n\n\n*/\n\nul.treeview,\n.treeview ul {\n  margin: 0px 0px 0px 20px;\n  list-style: none;\n  line-height: 2em;\n  font-family: Arial;\n}\nul.treeview li,\n.treeview ul li {\n  font-size: 16px;\n  position: relative;\n}\nul.treeview li p,\n.treeview ul li p {\n  margin: .5em 0 1em 0;\n  line-height: 1em;\n}\nul.treeview li:before,\n.treeview ul li:before {\n  position: absolute;\n  left: -15px;\n  top: 0px;\n  content: '';\n  display: block;\n  border-left: 1px solid #ddd;\n  height: 1em;\n  border-bottom: 1px solid #ddd;\n  width: 10px;\n}\nul.treeview li:after,\n.treeview ul li:after {\n  position: absolute;\n  left: -15px;\n  bottom: -7px;\n  content: '';\n  display: block;\n  border-left: 1px solid #ddd;\n  height: 100%;\n}\nul.treeview li.root,\n.treeview ul li.root {\n  margin: 0px 0px 0px -20px;\n}\nul.treeview li.root:before,\n.treeview ul li.root:before {\n  display: none;\n}\nul.treeview li.root:after,\n.treeview ul li.root:after {\n  display: none;\n}\nul.treeview li:last-child:after,\n.treeview ul li:last-child:after {\n  display: none;\n}\n\n.treeview .icon {\n\tfloat: left;\n    margin: 6px;\n}\n\n.treeview .tv-description {\nfont-size: .8em;\nline-height: 1;\nmargin-left: 2rem;\n}",
+            "bag": "default",
+            "revision": "7",
+            "type": "text/css",
+            "title": "$:/plugins/mistergraphx/treeview/treeview-styles.css",
+            "tags": "$:/tags/Stylesheet",
+            "modified": "20180826171455009",
+            "created": "20180826101752895"
+        },
+        "$:/plugins/mistergraphx/treeview/macros": {
+            "text": "\\define tv-description(txt:\"folder\" extenders:\"\")\n<div class=\"tv-description $extenders$\">\n$txt$\n</div>\n\\end",
+            "bag": "default",
+            "revision": "1",
+            "type": "text/vnd.tiddlywiki",
+            "title": "$:/plugins/mistergraphx/treeview/macros",
+            "tags": "$:/tags/Macro",
+            "modified": "20180826170339525",
+            "created": "20180826170036399"
+        },
+        "$:/plugins/mistergraphx/treeview/example": {
+            "created": "20180826164144395",
+            "text": "!! Demonstration page for treeview\n\nExample :\n\n@@.treeview\n*.root <<icon>> Root Directory\n** <<icon >> Sub directory<<tv-description txt:\"Description of a tree directory\">>\n*** <<icon file>> filename.css<<tv-description txt:\"Wiki formatting in ''parameters''\nCould be a multiline parameter\n\">>\n** <<icon >> Sub directory\n** <<icon >> Sub directory\n** <<icon >> Sub directory\n@@\n\nCode \n\n```\n@@.treeview\n*.root <<icon>> Root Directory\n** <<icon >> Sub directory<<tv-description txt:\"Description of a tree directory\">>\n*** <<icon file>> filename.css<<tv-description txt:\"Wiki formatting in ''parameters''\nCould be a multiline parameter\n\">>\n** <<icon >> Sub directory\n** <<icon >> Sub directory\n** <<icon >> Sub directory\n@@\n```\n\n<<.tip \"\"\"The icon macro use $:/plugins/mistergraphx/tw5sprite plugin.\"\"\">>\n\n!!! Macros \n\nA macro to deal with wiki list\n\n```\n<<tv-description txt:\"Wiki formatting in ''parameters''\nCould be a multiline parameter\n\">>\n```\n",
+            "bag": "default",
+            "revision": "4",
+            "type": "text/vnd.tiddlywiki",
+            "title": "$:/plugins/mistergraphx/treeview/example",
+            "tags": "",
+            "modified": "20180828134316308"
+        }
+    }
+}

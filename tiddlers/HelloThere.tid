@@ -1,0 +1,29 @@
+created: 20180828054323061
+modified: 20180829062359406
+title: HelloThere
+type: text/vnd.tiddlywiki
+
+!!Welcome
+
+Ceci est une édition de TiddlyWiki
+
+* Language Français
+* Diagrammes et Flow charts avec Mermaid
+* Édition avec Code mirror editor 
+* Coloration syntaxique avec Higlight
+* Présentation d'arborescences et système de fichier avec $:/plugins/mistergraphx/treeview
+* Sprite svg et icons $:/plugins/mistergraphx/tw5sprite
+
+''Doc & Sources ''
+
+* Site officiel : https://tiddlywiki.com/
+* Wiki dev  : https://tiddlywiki.com/dev/
+* Depot ~GitHub : https://github.com/Jermolene/TiddlyWiki5
+
+Wiki spécifique à l'utilisation de ~TiddlyWiki avec node.js
+
+http://tobibeer.github.io/tw/node/#Welcome
+
+Sources sur ~GitHub du blog de l'auteur de ~TiddlyWiki
+
+https://github.com/Jermolene-blog/blog
