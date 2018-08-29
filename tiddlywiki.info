@@ -1,5 +1,5 @@
 {
-    "description": "Basic client-server edition",
+    "description": "TW5 GX client-server edition",
     "plugins": [
         "tiddlywiki/tiddlyweb",
         "tiddlywiki/filesystem",
