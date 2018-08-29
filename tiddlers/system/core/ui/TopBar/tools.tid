@@ -5,7 +5,5 @@ title: $:/core/ui/TopBar/tools
 type: text/vnd.tiddlywiki
 
 <div class="tc-topbar-tools">
-
 {{||$:/core/ui/PageTemplate/pagecontrols}}
-
 </div>

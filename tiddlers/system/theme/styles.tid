@@ -9,6 +9,20 @@ type: text/vnd.tiddlywiki
 	width: 3rem;
   height: 3rem;
 }
+	.tc-topbar button:focus {
+		outline-style: none;
+	}
+	.tc-topbar button:focus svg {
+		fill: rgba(0,0,0,.8);
+	}
+	/* Txt affiché lors d'une recherche dans le form */
+	.tc-topbar button em {
+		display: block;
+		position: absolute;
+		left: 1em;
+	}
+
+
 .tc-topbar-left {
     left: 0;
     top: 0;
@@ -23,17 +37,72 @@ type: text/vnd.tiddlywiki
 		text-decoration: none;
 	}
 
-.tc-sidebar-lists input {
-    color: #333333;
-    font-size: 1.2em;
-    padding: .3em;
+.tc-topbar-right {
+		z-index: 1201;
+		display: flex;
+		align-items: flex-end;
+		padding: .8em 0;
+
+		top: 0;
+		right: 0;
 }
-.tc-search button svg,
-.tc-search a svg {
-    height: 2.2em;
-    width: 2.2em;
-    margin: 0 0.25em;
+
+.tc-search input {
+		float: left;
+    padding: .3em .8em;
+		margin-top: .4em;
+
+		color: #333333;
+		font-size: 1.2em;
+
+		border-color: #aaaaaa;
+    border-width: 2px;
+    border-radius: 5em;
+    border-style: solid;
 }
+	.tc-search input:focus {
+		border-color: #776c6c;
+		border-width: 3px;
+		outline-style: none;
+	}
+
+	.tc-search button svg,
+	.tc-search a svg {
+	    height: 2.2em;
+	    width: 2.2em;
+	    margin: 0 0.25em;
+	}
+
+	/* Results
+	 [1] surcharge du relatif le parent est fixed
+	*/
+
+	.tc-block-dropdown-wrapper {
+    position: inherit; /* 1 */
+	}
+
+	.tc-block-dropdown {
+    min-width: 320px;
+    border: 1px solid #bbb;
+    background-color: #ffffff;
+
+    left: 0;
+		margin:0 auto;
+	}
+	.tc-block-dropdown.tc-search-drop-down {
+		margin-left: 0;
+		top: 1em; /* se positionner en dessous de la TopBar */
+	}
+
+.tc-topbar-tools {
+	border-left: 1px solid silver;
+}
+
+.tc-page-controls {
+	margin: 0;
+	padding: 0;
+}
+
 
 @media (min-width: 960px) {
   .tc-sidebar-scrollable{
@@ -45,9 +114,10 @@ type: text/vnd.tiddlywiki
   }
 
 	.tc-story-river {
-		margin-left: 30%;
+
 		width: auto;
-		padding-top: 5.5rem; /* Compensse la hauteur de la TopBar */
+		margin-left: 30%;
+		margin-top: 5.5rem; /* Compensse la hauteur de la TopBar */
 	}
 	<<if-no-sidebar "
 		.tc-story-river {
