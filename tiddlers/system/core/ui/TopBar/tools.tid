@@ -1,0 +1,11 @@
+created: 20180828174325145
+modified: 20180829125023363
+tags: $:/tags/TopRightBar
+title: $:/core/ui/TopBar/tools
+type: text/vnd.tiddlywiki
+
+<div class="tc-topbar-tools">
+
+{{||$:/core/ui/PageTemplate/pagecontrols}}
+
+</div>
