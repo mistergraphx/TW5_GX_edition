@@ -102,6 +102,10 @@ type: text/vnd.tiddlywiki
 	margin: 0;
 	padding: 0;
 }
+/* Side bar */
+.tc-tab-buttons{
+	font-size: 1rem;
+}
 
 
 @media (min-width: 960px) {
@@ -110,7 +114,7 @@ type: text/vnd.tiddlywiki
      right: auto;
      width: 30%;
      margin: 0;
-     padding: 72px 0 1rem 1rem;
+     padding: 6.5rem 0 1rem 1rem;
   }
 
 	.tc-story-river {
@@ -131,6 +135,13 @@ type: text/vnd.tiddlywiki
 	}
 }
 
+
+
+/* Editor */
+
+.CodeMirror-fullscreen{
+	z-index: 10000;
+}
 /*
 
 html body.tc-body {
