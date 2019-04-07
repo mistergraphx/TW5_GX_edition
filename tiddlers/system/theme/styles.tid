@@ -39,8 +39,16 @@ type: text/vnd.tiddlywiki
 
 .tc-topbar-right {
 		z-index: 1201;
+		display: -webkit-box;
+		display: -ms-flexbox;
 		display: flex;
-		align-items: flex-end;
+		/* width: 70%; */
+		-webkit-box-align: end;
+		-ms-flex-align: end;
+		        align-items: flex-end;
+		-webkit-box-pack: end;
+		-ms-flex-pack: end;
+		        justify-content: flex-end;
 		padding: .8em 0;
 
 		top: 0;
@@ -59,10 +67,14 @@ type: text/vnd.tiddlywiki
     border-width: 2px;
     border-radius: 5em;
     border-style: solid;
+
+		-webkit-transition: all .5s linear;
+				transition: all .5s linear;
 }
 	.tc-search input:focus {
 		border-color: #776c6c;
 		border-width: 3px;
+
 		outline-style: none;
 	}
 
@@ -141,6 +153,12 @@ type: text/vnd.tiddlywiki
 
 .CodeMirror-fullscreen{
 	z-index: 10000;
+}
+
+
+/* Tiddler content */
+.tc-tiddler-frame .tc-tiddler-body{
+	font-size: 1rem;
 }
 /*
 
