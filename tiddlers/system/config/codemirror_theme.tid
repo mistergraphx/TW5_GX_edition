@@ -1,6 +1,6 @@
 created: 20190406173800437
-modified: 20190407053648472
+modified: 20190407074406255
 title: $:/config/codemirror/theme
 type: string
 
-default
+duotone-light
