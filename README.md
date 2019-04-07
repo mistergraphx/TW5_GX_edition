@@ -1,4 +1,4 @@
-Ceci est une édition de [TiddlyWiki](https://tiddlywiki.com/)
+Edition de [TiddlyWiki](https://tiddlywiki.com/)
 Intégrant les fonctionnalités suivantes :
 
 - Langage Français
@@ -25,3 +25,34 @@ tiddlywiki nomWiki --server 8080
 ```
 
 Le wiki doit être accessible sur http://127.0.0.1:8080/
+
+
+**Créer d'autres wikis depuis cette base.**
+
+Créer un dossier et son fichier tiddlywiki.info
+
+```json
+{
+    "description": "New Wiki",
+    "plugins": [
+  		"tiddlywiki/tiddlyweb",
+  		"tiddlywiki/filesystem"
+  	],
+    "themes": [
+        "tiddlywiki/vanilla",
+        "tiddlywiki/snowwhite"
+    ],
+    "includeWikis": [
+  		"../TW5_GX_edition"
+  	]
+}
+```
+
+
+
+```shell
+# démarrer le serveur
+tiddlywiki testWiki --server 8282
+# Produire une version statique
+tiddlywiki testWiki --rendertiddler $:/core/save/all index.html text/plain
+```
