@@ -159,6 +159,7 @@ type: text/vnd.tiddlywiki
 /* Tiddler content */
 .tc-tiddler-frame .tc-tiddler-body{
 	font-size: 1rem;
+	line-height: 1.5;
 }
 /*
 
