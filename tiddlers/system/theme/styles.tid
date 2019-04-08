@@ -92,7 +92,7 @@ type: text/vnd.tiddlywiki
 	}
 
 	.tc-block-dropdown {
-    min-width: 320px;
+
     border: 1px solid #bbb;
     background-color: #ffffff;
 
@@ -100,8 +100,10 @@ type: text/vnd.tiddlywiki
 		margin:0 auto;
 	}
 	.tc-block-dropdown.tc-search-drop-down {
+		width: 23rem;
 		margin-left: 0;
 		top: 1em; /* se positionner en dessous de la TopBar */
+		left: 0;
 	}
 
 .tc-topbar-tools {
