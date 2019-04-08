@@ -85,12 +85,10 @@ type: text/vnd.tiddlywiki
 	    margin: 0 0.25em;
 	}
 
-	/* Results
-	 [1] surcharge du relatif le parent est fixed
-	*/
 
 	.tc-block-dropdown-wrapper {
-    position: inherit; /* 1 */
+    position: absolute;
+		left: 0;
 	}
 
 	.tc-block-dropdown {
