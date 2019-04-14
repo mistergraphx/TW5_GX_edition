@@ -1,0 +1,13 @@
+caption: Graph - Mermaid
+created: 20190414064145067
+modified: 20190414064425598
+tags: $:/tags/TextEditor/Snippet
+title: Graph Mermaid
+type: text/vnd.tiddlywiki
+
+<$mermaid>
+graph LR
+  A --> B(Dir)
+  B --> C{C}
+  A -.- C
+</$mermaid>

@@ -1,0 +1,12 @@
+caption: Mermaid sequence diagram
+created: 20190414065235471
+modified: 20190414065319087
+tags: $:/tags/TextEditor/Snippet
+title: Mermaid - sequence
+type: text/vnd.tiddlywiki
+
+<$mermaid>
+sequenceDiagram
+    Alice->>John: Hello John, how are you?
+    John-->>Alice: Great!
+</$mermaid>
