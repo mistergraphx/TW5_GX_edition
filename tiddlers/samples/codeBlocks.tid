@@ -1,5 +1,5 @@
 created: 20180828063606528
-modified: 20190407030857294
+modified: 20191230182445445
 tags: Samples
 title: codeBlocks
 type: text/vnd.tiddlywiki
@@ -39,4 +39,10 @@ $var: #000 !default;
 .class {
 	background-color: $var;
 }
+```
+
+TWIG / Nunjucks
+
+```twig
+{% set products = getDatas('./src/datas/products.js') %}
 ```
