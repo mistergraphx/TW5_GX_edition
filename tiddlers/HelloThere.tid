@@ -14,11 +14,13 @@ Ceci est une édition de TiddlyWiki, axé sur la documentation de projets web (l
 * langage français
 * diagrammes et Flow charts avec Mermaid
 * Édition avec Code mirror editor
-* Coloration syntaxique avec Highlight
-* Présentation d'arborescences et système de fichier avec $:/plugins/mistergraphx/treeview
-* Sprite svg et icons $:/plugins/mistergraphx/tw5sprite
+* Coloration syntaxique avec Higlight
+
 
 ''Utilitaires''
+
+* Présentation d'arborescences et système de fichier avec $:/plugins/mistergraphx/treeview
+* Sprite svg et icons $:/plugins/mistergraphx/tw5sprite
 
 Macro css utiles $:/core/macros/CSS
 
