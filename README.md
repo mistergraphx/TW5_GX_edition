@@ -8,7 +8,7 @@ Intégrant les fonctionnalités suivantes :
 - Diagrammes et Flow charts avec Mermaid
 - Syntaxe Markdown
 - Édition avec Code mirror editor
-- Coloration syntaxique avec Higlight
+- Coloration syntaxique avec Highlight.js
 - Présentation d'arborescences et système de fichier avec $:/plugins/mistergraphx/treeview
 - Sprite svg et icons $:/plugins/mistergraphx/tw5sprite
 
@@ -24,7 +24,7 @@ et se référer à [Installer TydllyWiki on node](https://tiddlywiki.com/#Instal
 # Récupérer le dépôt
 git clone https://github.com/mistergraphx/TW5_GX_edition.git monWiki
 # Démarrer le serveur local sur ce wiki
-tiddlywiki nomWiki --server 8080
+tiddlywiki nomWiki --listen
 ```
 
 Le wiki doit être accessible sur http://127.0.0.1:8080/
@@ -55,7 +55,7 @@ Créer un dossier et son fichier tiddlywiki.info
 
 ```shell
 # démarrer le serveur
-tiddlywiki testWiki --server 8282
+tiddlywiki testWiki --listen
 # Produire une version statique
 tiddlywiki testWiki --rendertiddler $:/core/save/all index.html text/plain
 ```

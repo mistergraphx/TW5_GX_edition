@@ -5,11 +5,7 @@
         "tiddlywiki/filesystem",
         "tiddlywiki/codemirror",
         "tiddlywiki/markdown",
-        "tiddlywiki/highlight",
-        "gt6796c/rocklib",
-        "gt6796c/mermaid-tw5",
-        "mistergraphx/treeview",
-        "mistergraphx/tw5sprite"
+        "tiddlywiki/highlight"
     ],
     "themes": [
         "tiddlywiki/vanilla",
