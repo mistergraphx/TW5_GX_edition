@@ -1,0 +1,9 @@
+created: 20260224135024103
+modified: 20260224144422681
+title: $:/plugins/bj/defaultJot
+type: text/vnd.tiddlywiki
+
+\rules only table wikilink prettylink
+
+|!Title|!Body|!Tags|!Fields modifiers|!field initials|!Modes|
+|((*@dateShort*))|((*@pageRef*))\n\n((*@text*))\n\n|Journal||[[$:/bj/tc/snipmetadata]]|append add|
