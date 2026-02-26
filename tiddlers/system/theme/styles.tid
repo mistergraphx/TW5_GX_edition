@@ -59,10 +59,13 @@ type: text/vnd.tiddlywiki
     border: 1px solid gray;
 }
 
+.tc-search{
+  z-index: 2;
+}
 .tc-search input {
 		float: left;
     padding: .3em .8em;
-		margin-top: .4em;
+		/* margin-top: .4em; */
 
 		color: #333333;
 		font-size: 1.2em;
@@ -72,8 +75,7 @@ type: text/vnd.tiddlywiki
     border-radius: 5em;
     border-style: solid;
 
-		-webkit-transition: all .5s linear;
-				transition: all .5s linear;
+		transition: all .5s linear;
 }
 	.tc-search input:focus {
 		border-color: #776c6c;
@@ -92,21 +94,22 @@ type: text/vnd.tiddlywiki
 
 	.tc-block-dropdown-wrapper {
     position: absolute;
+    z-index: 1;
 		left: 0;
 	}
 
 	.tc-block-dropdown {
+    left: 0;
+		margin:0 auto;
+    padding: 1em 1.1em 0;
 
     border: 1px solid #bbb;
     background-color: #ffffff;
-
-    left: 0;
-		margin:0 auto;
 	}
 	.tc-block-dropdown.tc-search-drop-down {
 		/* width: 23rem; */
 		margin-left: 0;
-		top: 1.5em;
+		top: 0;
 		left: 0;
 	}
 
