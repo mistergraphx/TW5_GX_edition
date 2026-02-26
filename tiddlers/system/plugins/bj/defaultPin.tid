@@ -1,0 +1,9 @@
+created: 20260224090354191
+modified: 20260224130509602
+title: $:/plugins/bj/defaultPin
+type: text/vnd.tiddlywiki
+
+\rules only table wikilink prettylink
+
+|!Title|!Body|!Tags|!Fields modifiers|!field initials|!Modes|
+|((*@pageTitle*))|((*@pageRef*))\n\n[img[((*@onImage*??*@imageURL*??*@largestImgURL*))]]\n\n((*@text*))\n\n((*@exists(@userstring)*??*@userstring*))|||[[$:/bj/tc/snipmetadata]]|inc add|
