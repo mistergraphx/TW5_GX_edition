@@ -1,0 +1,11 @@
+created: 20260224100008137
+modified: 20260224155537087
+title: TiddlyClipConfig
+type: text/vnd.tiddlywiki
+
+!default
+|!Category|!Tip|!Tags|!Rule Tid|!Modes|
+|Jot|Jot it|Journal|[[$:/plugins/bj/defaultJot]]||
+|Snip|copy|[[Reading Notes]]|[[defaultSnip]]||
+|Pin|pin it|[[Reading Notes]]|[[defaultPin]]|userstring|
+|Snap|screen shot|[[Reading Notes]]|[[defaultSnap]]|snap userstring|
