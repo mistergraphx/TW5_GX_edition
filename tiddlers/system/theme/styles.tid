@@ -5,9 +5,9 @@ title: $:/_Styles
 type: text/vnd.tiddlywiki
 
 .tc-topbar button {
-	float: left;
-	width: 3rem;
-  height: 3rem;
+	float:  left;
+	/* width: 3rem;
+  height: 3rem; */
 }
 	.tc-topbar button:focus {
 		outline-style: none;
@@ -37,22 +37,26 @@ type: text/vnd.tiddlywiki
 		text-decoration: none;
 	}
 
+  .tc-topbar-left .tc-site-title{
+    font-size: 1.55em;
+  }
+
 .tc-topbar-right {
 		z-index: 1201;
-		display: -webkit-box;
-		display: -ms-flexbox;
 		display: flex;
-		/* width: 70%; */
-		-webkit-box-align: end;
-		-ms-flex-align: end;
-		        align-items: flex-end;
-		-webkit-box-pack: end;
-		-ms-flex-pack: end;
-		        justify-content: flex-end;
+		align-items: center;
+    justify-content: end;
+    flex-direction: column;
+    gap: 1rem;
 		padding: .8em 0;
 
-		top: 0;
+    transform: translateX(-100vw);
+
+		top: 4.6em;
 		right: 0;
+
+    background-color: white;
+    border: 1px solid gray;
 }
 
 .tc-search input {
@@ -78,12 +82,12 @@ type: text/vnd.tiddlywiki
 		outline-style: none;
 	}
 
-	.tc-search button svg,
+	/* .tc-search button svg,
 	.tc-search a svg {
 	    height: 2.2em;
 	    width: 2.2em;
 	    margin: 0 0.25em;
-	}
+	} */
 
 
 	.tc-block-dropdown-wrapper {
@@ -100,11 +104,15 @@ type: text/vnd.tiddlywiki
 		margin:0 auto;
 	}
 	.tc-block-dropdown.tc-search-drop-down {
-		width: 23rem;
+		/* width: 23rem; */
 		margin-left: 0;
-		top: 1em; /* se positionner en dessous de la TopBar */
+		top: 1.5em;
 		left: 0;
 	}
+
+  .clear-search{
+    margin-inline-start: -3rem;
+  }
 
 .tc-topbar-tools {
 	border-left: 1px solid silver;
@@ -121,6 +129,18 @@ type: text/vnd.tiddlywiki
 
 
 @media (min-width: 960px) {
+  .tc-topbar-right{
+    flex-direction: row;
+    transform: none;
+    border: none;
+    top: 0;
+  }
+
+  .tc-page-controls{
+    /* display: flex; */
+
+  }
+
   .tc-sidebar-scrollable{
      left: 0;
      right: auto;
@@ -135,6 +155,7 @@ type: text/vnd.tiddlywiki
 		margin-left: 30%;
 		margin-top: 5.5rem; /* Compensse la hauteur de la TopBar */
 	}
+
 	<<if-no-sidebar "
 		.tc-story-river {
 			margin-left:  0px;
