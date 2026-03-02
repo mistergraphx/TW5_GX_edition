@@ -1,6 +1,6 @@
 created: 20180829130628389
 modified: 20180829130730029
-tags: $:/tags/TopRightBar
+tags: $:/tags/TopLeftBar
 title: $:/core/ui/searchForm
 type: text/vnd.tiddlywiki
 
@@ -22,40 +22,52 @@ type: text/vnd.tiddlywiki
 
 \whitespace trim
 
-
-
 <div class="tc-search">
-<$keyboard key="((input-tab-right))" actions=<<set-next-input-tab>>>
-<$keyboard key="((input-tab-left))" actions=<<set-previous-input-tab>>>
-<$keyboard key="shift-alt-Right" actions=<<next-search-tab>>>
-<$keyboard key="shift-alt-Left" actions=<<previous-search-tab>>>
-<$transclude $variable="keyboard-driven-input"
-	tiddler="$:/temp/topBarSearch/input"
-	storeTitle="$:/temp/topBarSearch"
-	refreshTitle="$:/temp/topBarSearch/refresh"
-	selectionStateTitle="$:/temp/topBarSearch/selected-item"
-	type="search"
-	tag="input"
-	focus={{$:/config/Search/AutoFocus}}
-	inputCancelActions=<<cancel-search-actions>>
-	inputAcceptActions=<<input-accept-actions>>
-	inputAcceptVariantActions=<<input-accept-variant-actions>>
-	configTiddlerFilter="[[$:/state/topBarSearch/standard/currentTab]!is[missing]get[text]] :else[{$:/config/SearchResults/Default}]"
-	filterMinLength={{$:/config/Search/MinLength}}/>
-</$keyboard>
-</$keyboard>
-</$keyboard>
-</$keyboard>
-&#32;
+
+  <$keyboard key="((input-tab-right))" actions=<<set-next-input-tab>>>
+
+    <$keyboard key="((input-tab-left))" actions=<<set-previous-input-tab>>>
+
+      <$keyboard key="shift-alt-Right" actions=<<next-search-tab>>>
+
+        <$keyboard key="shift-alt-Left" actions=<<previous-search-tab>>>
+
+          <$transclude $variable="keyboard-driven-input"
+            tiddler="$:/temp/topBarSearch/input"
+            storeTitle="$:/temp/topBarSearch"
+            refreshTitle="$:/temp/topBarSearch/refresh"
+            selectionStateTitle="$:/temp/topBarSearch/selected-item"
+            type="search"
+            tag="input"
+            placeholder="Search"
+            focus={{$:/config/Search/AutoFocus}}
+            inputCancelActions=<<cancel-search-actions>>
+            inputAcceptActions=<<input-accept-actions>>
+            inputAcceptVariantActions=<<input-accept-variant-actions>>
+            configTiddlerFilter="[[$:/state/topBarSearch/standard/currentTab]!is[missing]get[text]] :else[{$:/config/SearchResults/Default}]"
+            filterMinLength={{$:/config/Search/MinLength}}/>
+
+        </$keyboard>
+
+      </$keyboard>
+
+    </$keyboard>
+
+  </$keyboard>
+
 <$reveal state="$:/temp/topBarSearch" type="nomatch" text="">
+
 <$button class="clear-search tc-btn-invisible">
+
 <<cancel-search-actions>>
-{{$:/core/images/close-button}}
+
+<$transclude tiddler="$:/core/images/close-button" mode="inline" />
+
 </$button>
+
 </$reveal>
+
 </div>
-
-
 
 <$reveal tag="div" class="tc-block-dropdown-wrapper" state="$:/temp/topBarSearch" type="nomatch" text="">
 
@@ -65,22 +77,32 @@ type: text/vnd.tiddlywiki
 	filter="[{$:/temp/topBarSearch}minlength{$:/config/Search/MinLength}limit[1]]"
 	emptyMessage="<div class='tc-search-results'>{{$:/language/Search/Search/TooShort}}</div>"
 	variable="listItem">
+
 <$vars
 	userInput={{{ [[$:/temp/topBarSearch]get[text]] }}}
 	configTiddler={{{ [[$:/state/topBarSearch/standard/currentTab]!is[missing]get[text]] :else[{$:/config/SearchResults/Default}] }}}
 	searchListState="$:/temp/topBarSearch/selected-item">
+
 <$list filter="[all[shadows+tiddlers]tag[$:/tags/SearchResults]!has[draft.of]butfirst[]limit[1]]">
+
 <$list-empty>
+
 <$list filter='[all[shadows+tiddlers]tag[$:/tags/SearchResults]!has[draft.of]]'><$transclude mode="block"/></$list>
+
 </$list-empty>
+
 <$transclude $variable="tabs"
 	tabsList="[all[shadows+tiddlers]tag[$:/tags/SearchResults]!has[draft.of]]"
 	default={{$:/config/SearchResults/Default}}
 	actions="<$action-setfield $tiddler='$:/state/topBarSearch/standard/currentTab' text=<<currentTab>>/>"
 	explicitState="$:/state/tab/search-results/topBarSearch" />
+
 </$list>
+
 </$vars>
+
 </$list>
-</$reveal>
+
 </$reveal>
 
+</$reveal>

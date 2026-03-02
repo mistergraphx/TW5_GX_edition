@@ -1,0 +1,53 @@
+code-body: yes
+created: 20260227072558812
+description: GX more modern responsive template
+icon: $:/core/images/standard-layout
+modified: 20260227073244703
+name: GX responsive One
+tags: $:/tags/Layout
+title: $:/gx/page-template
+type: text/vnd.tiddlywiki
+
+\whitespace trim
+\import [subfilter{$:/core/config/GlobalImportFilter}]
+
+<$vars
+	tv-config-toolbar-icons={{$:/config/Toolbar/Icons}}
+	tv-config-toolbar-text={{$:/config/Toolbar/Text}}
+	tv-config-toolbar-class={{$:/config/Toolbar/ButtonClass}}
+	tv-enable-drag-and-drop={{$:/config/DragAndDrop/Enable}}
+	tv-show-missing-links={{$:/config/MissingLinks}}
+	storyviewTitle={{$:/view}}
+	languageTitle={{{ [{$:/language}get[name]] }}}>
+
+<div class={{{ [all[shadows+tiddlers]tag[$:/tags/ClassFilters/PageTemplate]!is[draft]] :map:flat[subfilter{!!text}] tc-page-container [[tc-page-view-]addsuffix<storyviewTitle>] [[tc-language-]addsuffix<languageTitle>] [[isMobile-]addsuffix<isMobile>] :and[unique[]join[ ]] }}} >
+
+<$navigator story="$:/StoryList" history="$:/HistoryList" openLinkFromInsideRiver={{$:/config/Navigation/openLinkFromInsideRiver}} openLinkFromOutsideRiver={{$:/config/Navigation/openLinkFromOutsideRiver}} relinkOnRename={{$:/config/RelinkOnRename}}>
+
+<$dropzone enable=<<tv-enable-drag-and-drop>> class="tc-dropzone tc-page-container-inner">
+
+{{$:/gx/header}}
+
+<% if [{$:/state/sidebar}match[yes]] %>
+  OPEN
+<% else %>
+  CLOSED
+<% endif %>
+
+<$list filter="
+  [all[shadows+tiddlers]tag[$:/tags/PageTemplate]!has[draft.of]]
+  -[[$:/core/ui/PageTemplate/topleftbar]]
+  -[[$:/core/ui/PageTemplate/toprightbar]]
+" variable="listItem">
+
+<$transclude tiddler=<<listItem>>/>
+
+</$list>
+
+</$dropzone>
+
+</$navigator>
+
+</div>
+
+</$vars>

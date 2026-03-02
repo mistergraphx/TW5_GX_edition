@@ -4,6 +4,14 @@ tags: $:/tags/TopRightBar
 title: $:/core/ui/TopBar/tools
 type: text/vnd.tiddlywiki
 
-<div class="tc-topbar-tools">
-{{||$:/core/ui/PageTemplate/pagecontrols}}
+<div class="gx-header_tools tc-topbar-tools">
+
+  <div class="gx-header_tools_search-box">
+
+    <$transclude tiddler="$:/core/ui/searchForm" mode="block"/>
+
+  </div>
+
+  <$transclude tiddler="$:/core/ui/PageTemplate/pagecontrols" mode="inline"/>
+
 </div>
