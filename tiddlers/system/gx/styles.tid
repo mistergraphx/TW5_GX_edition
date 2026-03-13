@@ -190,7 +190,7 @@ type: text/vnd.tiddlywiki
 @media screen and (min-width:960px) {
   .tc-page-container-inner {
     grid-template-rows: 50px 1fr;
-    grid-template-columns: 40ch auto;
+    grid-template-columns: auto fit-content(100%);
     grid-template-areas: "header header"
   "aside content";
     gap: 1rem;
@@ -232,6 +232,10 @@ type: text/vnd.tiddlywiki
     position: relative;
     /* top: 0; */
     /* background-color: #ffffff; */
+    .tc-tab-content{
+      overflow-y: auto;
+      height: calc(100vh - 8rem);
+    }
   }
   .tc-sidebar-scrollable > div {
     position: sticky;
