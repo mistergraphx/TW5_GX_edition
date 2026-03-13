@@ -11,6 +11,14 @@ type: text/vnd.tiddlywiki
 \whitespace trim
 \import [subfilter{$:/core/config/GlobalImportFilter}]
 
+\define sidebarState()
+<% if [{$:/state/sidebar}match[yes]] %>
+sidebar--open
+<% else %>
+sidebar--closed
+<% endif %>
+\end
+
 <$vars
 	tv-config-toolbar-icons={{$:/config/Toolbar/Icons}}
 	tv-config-toolbar-text={{$:/config/Toolbar/Text}}
@@ -18,9 +26,10 @@ type: text/vnd.tiddlywiki
 	tv-enable-drag-and-drop={{$:/config/DragAndDrop/Enable}}
 	tv-show-missing-links={{$:/config/MissingLinks}}
 	storyviewTitle={{$:/view}}
+  sidebarState={{{ [{$:/state/sidebar}match[yes]then[open]]~[[closed]]}}}
 	languageTitle={{{ [{$:/language}get[name]] }}}>
 
-<div class={{{ [all[shadows+tiddlers]tag[$:/tags/ClassFilters/PageTemplate]!is[draft]] :map:flat[subfilter{!!text}] tc-page-container [[tc-page-view-]addsuffix<storyviewTitle>] [[tc-language-]addsuffix<languageTitle>] [[isMobile-]addsuffix<isMobile>] :and[unique[]join[ ]] }}} >
+<div class={{{ [all[shadows+tiddlers]tag[$:/tags/ClassFilters/PageTemplate]!is[draft]] :map:flat[subfilter{!!text}] tc-page-container [[tc-page-view-]addsuffix<storyviewTitle>] [[tc-language-]addsuffix<languageTitle>] [[tc-sidebar-]addsuffix<sidebarState>] :and[unique[]join[ ]] }}} >
 
 <$navigator story="$:/StoryList" history="$:/HistoryList" openLinkFromInsideRiver={{$:/config/Navigation/openLinkFromInsideRiver}} openLinkFromOutsideRiver={{$:/config/Navigation/openLinkFromOutsideRiver}} relinkOnRename={{$:/config/RelinkOnRename}}>
 
@@ -28,19 +37,13 @@ type: text/vnd.tiddlywiki
 
 {{$:/gx/header}}
 
-<% if [{$:/state/sidebar}match[yes]] %>
-  OPEN
-<% else %>
-  CLOSED
-<% endif %>
-
 <$list filter="
   [all[shadows+tiddlers]tag[$:/tags/PageTemplate]!has[draft.of]]
   -[[$:/core/ui/PageTemplate/topleftbar]]
   -[[$:/core/ui/PageTemplate/toprightbar]]
 " variable="listItem">
 
-<$transclude tiddler=<<listItem>>/>
+<$transclude tiddler=<<listItem>> />
 
 </$list>
 
