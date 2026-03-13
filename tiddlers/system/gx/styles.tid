@@ -1,0 +1,255 @@
+code-body: yes
+created: 20180828140013775
+modified: 20180829095419781
+tags: $:/tags/Stylesheet
+title: $:/gx/Styles
+type: text/vnd.tiddlywiki
+
+<% if [{$:/layout}match[$:/gx/page-template]] %>
+
+:root{
+ --spacer-1: 1rem;
+}
+
+.gx-header{
+  position: fixed;
+  z-index: 10;
+
+  bottom: 0;
+  width: 100vw;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 0.5em;
+
+  background-color: white;
+  box-shadow: 0 -2px 5px #a4a3a3;
+}
+
+.gx-header_menu{
+  display: flex;
+  gap:1rem;
+}
+
+.gx-header_menu_title{
+  display: none;
+}
+
+.gx-header_tools{
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+/* Hack for auto-grenerated tiddlywiki p
+@see https://talk.tiddlywiki.org/t/p-tags-where-i-do-not-want-them/4544/5
+*/
+.gx-header_tools p{
+  margin: 0;
+  padding: 0;
+}
+
+.tc-page-controls{
+  display: flex;
+  gap: 0.2em;
+}
+
+.gx-header_tools_search-box{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  padding: .5rem;
+  background-color: white;
+  border-bottom: 1px solid lightgray;
+  box-shadow: none;
+}
+
+.gx-header_tools_search-box .tc-search{
+  position: relative;
+  z-index: 10;
+}
+
+.gx-header_tools_search-box .tc-search input {
+  width: 100%;
+  padding: .3em .8em;
+
+  color: #333333;
+  font-size: 1.2em;
+
+  border-color: #aaaaaa;
+  border-width: 2px;
+  border-radius: 5em;
+  border-style: solid;
+
+  transition: all .5s linear;
+}
+
+.gx-header_tools_search-box .tc-search input:focus {
+  border-color: #776c6c;
+  border-width: 3px;
+
+  outline-style: none;
+}
+
+.gx-header_tools_search-box .tc-block-dropdown-wrapper {
+  position: absolute;
+  z-index: 1;
+  left: 0;
+  right: 0;
+  width: 100%;
+  box-shadow: 0 2px 5px #a6a1a1;
+}
+
+.gx-header_tools_search-box .tc-block-dropdown {
+  top: 0;
+  left: 0;
+  width: 100%;
+  margin:0 auto;
+  padding: 1.5em 1.1em 1em;
+
+  border: 1px solid #bbb;
+  background-color: #ffffff;
+}
+
+/* Force overide */
+.gx-header_tools_search-box .tc-block-dropdown.tc-search-drop-down {
+  margin-left: 0;
+  top: 0.5em;
+  left: 0;
+  width: 100%;
+}
+
+.clear-search{
+  position: absolute;
+  right: 0.8em;
+  top: 0.5em;
+}
+
+
+.tc-story-river{
+  position: relative;
+  grid-area: content;
+  z-index: 1;
+  top: 0;
+  left: unset;
+
+  padding: 0;
+  margin: 0;
+  width: auto;
+}
+
+.tc-tiddler-frame.tc-tiddler-view-frame.tc-tiddler-exists {
+  width: auto;
+}
+
+.tc-sidebar-scrollable{
+  grid-area: aside;
+  /* position: fixed; */
+  z-index: 5;
+
+  top: 0;
+  left: 0;
+  margin:0;
+  padding: 0;
+  overflow: unset !important; /* overide inline dynamic TW injection */
+
+  background-color: #f4f4f4;
+  transform: translateX(0);
+  transition: transform 5ms ease-in-out;
+}
+
+.tc-sidebar-scrollable:has(.sidebar-inner[hidden]){
+  transform: translateX(-100vw)
+}
+
+
+
+.tc-image-chevron-left{
+  fill: grey;
+}
+
+.tc-page-container-inner {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 50px auto;
+  grid-template-areas: "header" "aside" "content";
+  gap: 0;
+
+  max-inline-size: 60rem;
+  margin-inline-start: auto;
+  margin-inline-end: auto;
+}
+
+/* Tiddler content */
+.tc-tiddler-frame .tc-tiddler-body{
+	font-size: 1rem;
+	line-height: 1.5;
+}
+
+@media screen and (min-width:960px) {
+  .tc-page-container-inner {
+    grid-template-rows: 50px 1fr;
+    grid-template-columns: auto fit-content(100%);
+    grid-template-areas: "header header"
+  "aside content";
+    gap: 1rem;
+  }
+
+  .gx-header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: unset;
+    padding: 0 0.5em;
+    width: 100vw;
+    box-shadow: 0 -2px 5px black;
+  }
+
+  .gx-header_menu_title{
+    display: flex;
+    flex-direction: column;
+
+    font-size: 1rem;
+  }
+
+  .gx-header_menu_title small{
+    font-size: 0.7em;
+  }
+
+  .gx-header_tools_search-box{
+    position: relative;
+    width: auto;
+    padding: 0;
+    border: none;
+  }
+
+  .tc-block-dropdown.tc-search-drop-down {
+		top: 1.2em;
+	}
+
+  .tc-sidebar-scrollable {
+    position: relative;
+    /* top: 0; */
+    /* background-color: #ffffff; */
+    .tc-tab-content{
+      overflow-y: auto;
+      height: calc(100vh - 8rem);
+    }
+  }
+  .tc-sidebar-scrollable > div {
+    position: sticky;
+    top: 4.1rem;
+  }
+  .tc-story-river{
+
+  }
+}
+
+
+/* Editor */
+.CodeMirror-fullscreen{
+	z-index: 10000;
+}
+
+<% endif %>

@@ -1,0 +1,20 @@
+created: 20260227072558812
+modified: 20260227073244703
+tags: $:/tags/PageTemplate
+title: $:/gx/ui/header
+type: text/vnd.tiddlywiki
+
+<% if [{$:/layout}match[$:/gx/page-template]] %>
+<header class="gx-header tc-adjust-top-of-scroll">
+
+<$list filter="
+    [[$:/core/ui/TopBar/menu]]
+    [[$:/core/ui/TopBar/tools]]
+" variable="top-item">
+
+<$transclude tiddler=<<top-item>>/>
+
+</$list>
+
+</header>
+<% endif %>
