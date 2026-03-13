@@ -11,14 +11,6 @@ type: text/vnd.tiddlywiki
 \whitespace trim
 \import [subfilter{$:/core/config/GlobalImportFilter}]
 
-\define sidebarState()
-<% if [{$:/state/sidebar}match[yes]] %>
-sidebar--open
-<% else %>
-sidebar--closed
-<% endif %>
-\end
-
 <$vars
 	tv-config-toolbar-icons={{$:/config/Toolbar/Icons}}
 	tv-config-toolbar-text={{$:/config/Toolbar/Text}}
