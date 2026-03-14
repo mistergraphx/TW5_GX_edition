@@ -110,6 +110,13 @@ type: text/vnd.tiddlywiki
 
   border: 1px solid #bbb;
   background-color: #ffffff;
+  white-space: normal;
+
+  .tc-menu-list-item{
+    a{
+      padding: .3em 0;
+    }
+  }
 }
 
 /* Force overide */
@@ -118,6 +125,8 @@ type: text/vnd.tiddlywiki
   top: 0.5em;
   left: 0;
   width: 100%;
+  max-block-size:70vh;
+  overflow-y: scroll;
 }
 
 .clear-search{
