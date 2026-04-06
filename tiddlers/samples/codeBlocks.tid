@@ -1,8 +1,16 @@
 created: 20180828063606528
-modified: 20260206202141276
+modified: 20260406082210606
 tags: Samples
 title: codeBlocks
 type: text/vnd.tiddlywiki
+
+HTML
+
+```html
+<div class="selector">
+	<p>This is an example text</p>
+</div>
+```
 
 PHP
 
