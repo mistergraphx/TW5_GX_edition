@@ -1,0 +1,9 @@
+created: 20260224090257432
+modified: 20260224090307255
+title: $:/plugins/bj/defaultSnip
+type: text/vnd.tiddlywiki
+
+\rules only table wikilink prettylink
+
+|!Title|!Body|!Tags|!Fields modifiers|!field initials|!Modes|
+|((*@pageTitle*))|((*@pageRef*))\n\n((*@text*))\n\n|||[[$:/bj/tc/snipmetadata]]|append add|
