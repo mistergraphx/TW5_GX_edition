@@ -1,0 +1,40 @@
+caption: Table-of-Contents Macros: TiddlyWiki v5.3.8 — a non-linear personal web notebook
+created: 20260406114547974
+location: https://tiddlywiki.com/static/Table-of-Contents%2520Macros.html
+modified: 20260406114547974
+tags: [[Reading Notes]]
+title: Table-of-Contents Macros: TiddlyWiki v5.3.8 — a non-linear personal web notebook
+type: text/vnd.tiddlywiki
+when: 2026/4/6 13:45:47
+
+https://tiddlywiki.com/static/Table-of-Contents%2520Macros.html
+
+[img[]]
+
+Parameters
+
+tag
+    The root tag that identifies the top level of the tree
+    New in v5.3.5 If the tag parameter is "missing" or "an empty" string, the curretTiddler variable is used
+sort
+    An optional extra filter step, e.g. sort[title]
+
+These two parameters are combined into a single filter expression like this:
+
+    [tag[$tag$]$sort$]
+
+toc-tabbed-internal-nav and toc-tabbed-external-nav take additional parameters:
+
+selectedTiddler
+    The title of the state tiddler for noting the currently selected tiddler, defaulting to $:/temp/toc/selectedTiddler. It is recommended that this be a system tiddler
+unselectedText
+    The text to display when no tiddler is selected in the tree
+missingText
+    The text to display if the selected tiddler doesn't exist
+template
+    Optionally, the title of a tiddler to use as a template for transcluding the selected tiddler into the right-hand panel
+exclude New in v5.3.0
+    This optional parameter can be used to exclude tiddlers from the TOC list. It allows a Title List or a subfilter. Eg: exclude:"HelloThere [[Title with spaces]]" or exclude:"[has[excludeTOC]]". Where the former will exclude two tiddlers and the later would exclude every tiddler that has a field excludeTOC independent of its value.
+    Be aware that eg: [prefix[H]] is a shortcut for [all[tiddlers]prefix[H]], which can have a performance impact, if used carelessly. So use $:/AdvancedSearch -> Filters tab to test the exclude parameter
+
+pin add via ff extension alert box

@@ -9,7 +9,14 @@ title: TableOfContents
 type: text/vnd.tiddlywiki
 
 <div class="tc-table-of-contents">
-
+<h2>Readings notes</h2>
+<<toc-selective-expandable 'Reading Notes'>>
+<h2>Journal</h2>
+<$list filter="[tag[Journal]!has[draft.of]sort[title]]">
+<div class="tc-menu-list-subitem">
+<$link to={{!!title}}><$view field="title"/></$link> <small>(<$view field="caption"/>)</small>
+</div>
+</$list>
+<h2>Themes</h2>
 <<toc-selective-expandable 'TableOfContents'>>
-
 </div>
