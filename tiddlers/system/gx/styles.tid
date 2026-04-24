@@ -166,12 +166,26 @@ type: text/vnd.tiddlywiki
   background-color: #f4f4f4;
   transform: translateX(0);
   transition: transform 5ms ease-in-out;
+
+  .tc-table-of-contents{
+    /* .toc-item > * {display: inline-flex} */
+    .tc-btn-invisible{
+      float: left;
+    }
+    .tc-btn-invisible:has(.tc-image-blank){
+      display:none;
+    }
+    .tc-toc-caption{
+      display: block;
+      text-overflow: ellipsis;
+      overflow: hidden;
+    }
+  }
 }
 
 .tc-sidebar-scrollable:has(.sidebar-inner[hidden]){
   transform: translateX(-100vw)
 }
-
 
 
 .tc-image-chevron-left{
