@@ -3,13 +3,24 @@ created: 20140809114010378
 fr-title: Table des matières
 list-after: $:/core/ui/SideBar/Open
 list-before:
-modified: 20190407161328957
+modified: 20260408151224452
 tags: $:/tags/SideBar
 title: TableOfContents
 type: text/vnd.tiddlywiki
 
 <div class="tc-table-of-contents">
-
-<<toc-selective-expandable 'TableOfContents'>>
-
+<h2>Readings notes</h2>
+<$list filter="[tag[Reading Notes]!has[draft.of]sort[created]reverse[]]">
+<div class="tc-menu-list-subitem">
+<$link to={{!!title}}><$view field="title"/></$link> <small>(<$view field="created" format="date" template={{$:/language/Tiddler/DateFormat}}/>)</small>
+</div>
+</$list>
+<h2>Journal</h2>
+<$list filter="[tag[Journal]!has[draft.of]sort[title]reverse[]]">
+<div class="tc-menu-list-subitem">
+<$link to={{!!title}}><$view field="title"/></$link> <small>(<$view field="caption"/>)</small>
+</div>
+</$list>
+<h2>Themes</h2>
+<<toc-selective-expandable  "TableOfContents" "sort[order]">>
 </div>

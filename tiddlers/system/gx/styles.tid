@@ -166,12 +166,28 @@ type: text/vnd.tiddlywiki
   background-color: #f4f4f4;
   transform: translateX(0);
   transition: transform 5ms ease-in-out;
+
+  .tc-table-of-contents{
+    white-space: unset;
+    max-width: 90vw;
+    /* .toc-item > * {display: inline-flex} */
+    .tc-btn-invisible{
+      float: left;
+    }
+    .tc-btn-invisible:has(.tc-image-blank){
+      display:none;
+    }
+    .tc-toc-caption{
+      display: block;
+      text-overflow: ellipsis;
+      overflow: hidden;
+    }
+  }
 }
 
 .tc-sidebar-scrollable:has(.sidebar-inner[hidden]){
   transform: translateX(-100vw)
 }
-
 
 
 .tc-image-chevron-left{
@@ -200,10 +216,17 @@ type: text/vnd.tiddlywiki
   .tc-page-container-inner {
     grid-template-rows: 50px 1fr;
     grid-template-columns: auto fit-content(100%);
-    grid-template-areas: "header header"
-  "aside content";
+    grid-template-areas: "header header" "aside content";
     gap: 1rem;
+    .tc-sidebar-closed &{
+      grid-template-areas: "header header" "content content";
+      .tc-sidebar-scrollable{
+        display: none;
+      }
+    }
   }
+
+
 
   .gx-header{
     position: fixed;
